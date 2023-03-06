@@ -52,23 +52,23 @@ const ImcForm = () => {
         <form onSubmit={submitFormHandler}>
             <div className="mb-3">
                 <label htmlFor="date" className="form-label">Date: </label>
-                <input type="date" id="date" className="form-control" ref={dateRef} />
+                <input type="date" id="date" className="form-control" ref={dateRef} required />
             </div>
             <div className="mb-3">
                 <label htmlFor="height" className="form-label">Taille (en mètres) : </label>
-                <input type="number" step="0.01" id="height" className="form-control" ref={heightRef} />
+                <input type="number" step="0.01" id="height" className="form-control" ref={heightRef} required />
             </div>
             <div className="mb-3">
                 <label htmlFor="weight" className="form-label">Poids (en Kg): </label>
-                <input type="number" step="0.1" id="weight" className="form-control" ref={weightRef}  />
+                <input type="number" step="0.1" id="weight" className="form-control" ref={weightRef} required />
             </div>
             <div className="text-end">
-                <button className="btn btn-success"><i className="bi bi-plus-circle"></i> Ajouter</button>
+                <button className="btn btn-primary"><i className="bi bi-plus-circle"></i> Ajouter</button>
             </div>
         </form>
         <div className="">
-                <button className="btn btn-info m-2" onClick={visualize}><i className=""></i> Visualiser</button>
-                <button className="btn btn-primary m-2" onClick={back}><i className=""></i> Retour</button>
+                <button className="btn btn-success m-2" onClick={visualize}><i className=""></i> Visualiser</button>
+                <button className="btn btn-danger m-2" onClick={back}><i className=""></i> Retour</button>
         </div>
     </>
     )

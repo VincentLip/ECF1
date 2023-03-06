@@ -2,11 +2,11 @@ import { useSelector } from "react-redux"
 import classes from './ImcDisplay.module.css'
 
 
+
 const ImcDisplay = (props) => {
 
     const user = useSelector (state => state.auth.user)
     const imc = useSelector(state => state.imcs.imcs.find(a => a.id === props.imcId))
-
     const calculImc = Math.round(imc.weight/(imc.height*imc.height))
 
     return (
@@ -16,7 +16,7 @@ const ImcDisplay = (props) => {
             <div className="row align-items-center">
                 <div className="col-5">
                     <div>
-                        Le {imc.date}
+                        <b>Le :</b> {imc.date.split('-').reverse().join('-')}
                     </div>
                     <br />
                     <div>

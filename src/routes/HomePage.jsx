@@ -5,9 +5,15 @@ const HomePage = () => {
 
     const user = useSelector(state => state.auth.user)
     const navigate = useNavigate()
+
     const start = () => {
 
         navigate(`/imc`)
+    }
+
+    const visualize = () => {
+
+        navigate(`/affichage`)
     }
 
     return (
@@ -20,6 +26,7 @@ const HomePage = () => {
 
         {user && <div className="">
                 <button className="btn btn-primary m-2" onClick={start}><i className=""></i> Commencer</button>
+                <button className="btn btn-success m-2" onClick={visualize}><i className=""></i> Visualiser</button>
         </div>}
     </>
     )
