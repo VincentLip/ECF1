@@ -19,10 +19,10 @@ return (
                     <NavLink className="nav-link" to={`/`}>Home</NavLink>
                 </li>
                 <li className="nav-item">
-                    {user && <NavLink className="nav-link" to={`/people`}>People</NavLink>}
+                    {user && <NavLink className="nav-link" to={`/imc`}>Calcul IMC</NavLink>}
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link" to={`/addresses`}>Addresses</NavLink>
+                    {user && <NavLink className="nav-link" to={`/affichage`}>Affichage IMC</NavLink>}
                 </li>
                 </ul>
             {user ? (

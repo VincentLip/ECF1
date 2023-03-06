@@ -1,8 +1,20 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/shared/NavBar";
+import { fetchImcs } from "./routes/imc/ImcsSlice";
 
 
 function App() {
+
+  const dispatch = useDispatch()
+
+  useEffect(()=> {
+
+    dispatch(fetchImcs())
+  },[dispatch])
+
+  
   return (
     <div className="App">
       <header>

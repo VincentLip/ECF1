@@ -29,7 +29,7 @@ export const fetchImcs = createAsyncThunk (
 
 export const addImc = createAsyncThunk(
 
-    "imc/fetchImcs",
+    "imc/addImcs",
 
     async (imcValues, {getState}) => {
 
@@ -77,6 +77,10 @@ const imcsSlice = createSlice({
         builder.addCase(fetchImcs.fulfilled, (state, action) => {
             state.isLoading = false
             state.imcs = action.payload
+        })
+
+        builder.addCase(addImc.fulfilled, (state, action) => {
+            state.imcs.push(action.payload)
         })
     }
 })
