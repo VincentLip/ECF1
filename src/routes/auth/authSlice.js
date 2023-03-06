@@ -14,6 +14,7 @@ export const signIn = createAsyncThunk(
 
     if (!response.ok) {
         throw new Error("Erreur lors de l'authentification !")
+
     }
 
     const data = await response.json()

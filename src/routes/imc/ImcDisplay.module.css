@@ -1,0 +1,52 @@
+
+.severeunderweight {
+
+    color : rgba(74,121,175,255);
+
+}
+
+.underweight {
+
+    color: rgba(71,165,175,255);
+    
+}
+
+.normal {
+
+    color : rgba(84,181,150,255);
+   
+}
+
+.overweight {
+
+    color: rgba(236,198,73,255);
+    
+}
+
+.moderateobesity {
+
+    color : rgba(237,115,102,255);
+    
+}
+
+.severeobesity {
+
+    color : rgba(223,89,77,255);
+    
+}
+
+.morbidobesity {
+
+    color : rgba(174,74,74,255);
+    
+}
+
+.imc{
+
+    font-size: 5rem;
+}
+
+.interpretation{
+
+    font-size: 2rem;
+}

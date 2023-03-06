@@ -1,6 +1,8 @@
 import { useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addImc } from "./ImcsSlice"
+import { useNavigate} from "react-router-dom"
+
 
 const ImcForm = () => {
 
@@ -9,6 +11,7 @@ const ImcForm = () => {
     const dateRef = useRef()
     const heightRef = useRef()
     const weightRef = useRef()
+    const navigate = useNavigate()
 
     const dispatch = useDispatch()
 
@@ -29,6 +32,16 @@ const ImcForm = () => {
         dispatch(addImc(imcValues))
         
         alert("Vos Informations ont été ajouté")
+    }
+
+    const visualize = () => {
+
+        navigate(`/affichage`)
+    }
+
+    const back =() => {
+
+        navigate(`/`)
     }
 
 
@@ -52,7 +65,11 @@ const ImcForm = () => {
             <div className="text-end">
                 <button className="btn btn-success"><i className="bi bi-plus-circle"></i> Ajouter</button>
             </div>
-        </form> 
+        </form>
+        <div className="">
+                <button className="btn btn-info m-2" onClick={visualize}><i className=""></i> Visualiser</button>
+                <button className="btn btn-primary m-2" onClick={back}><i className=""></i> Retour</button>
+        </div>
     </>
     )
 }

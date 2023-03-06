@@ -1,23 +1,24 @@
+import { useRef } from "react"
 import { useSelector } from "react-redux"
 import ImcDisplay from "./ImcDisplay"
 
 const ImcsList = () =>{
 
-    const user = useSelector (state => state.auth.user)
     const imcs = useSelector(state => state.imcs.imcs)
 
+console.log(imcs)
+    
     return (
 
         <>
         <div className="d-flex justify-content-between align-items-center">
-            <h3>Imc List</h3>
+            <h3>Voici la liste de vos IMC</h3>
         </div>
         <hr />
+
         {imcs.length === 0 ?
-        <p>There is no address in the database!</p> : 
+        <p>Il n'y a aucune information !</p> : 
         imcs.map(a => <ImcDisplay key={a.id} imcId={a.id} />)}
-    
-        
         </>
     )
 
